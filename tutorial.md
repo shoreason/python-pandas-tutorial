@@ -23,7 +23,7 @@ Ready? To get started install Pandas
 $ pip install pandas
 ```
 ---
-# The basics
+# Getting Started
 The standard way to import pandas is like below. Almost everyone assigns it a 'pd' alias once imported
 
 ```python
@@ -36,11 +36,27 @@ DataFrames are at the core of pandas. You can reference elemts in a dataframe li
 For instance.
 
 ```python
-data = {'temperature':[75, 73, 80, 64, 32], 'energy_reading':[11, 3, 14, 18, 24]}
+data = {'temperature':[75, 73, 80, 64, 32, 65, 77], 'energy_reading':[11, 3, 14, 18, 24, 13, 6], 'Day': [1, 2, 3, 4, 5, 6, 7]}
 
 df = pd.DataFrame(data) # creating a dataframe from the data
 ```
 --
+Now we can preview the data by simply typing
+
+```python
+print(df)
+```
+That command prints out the dataset, but can be too much to see at once (especially with a lot of data). To preview the dataset you can just type any of the below
+
+```python
+print(df.head()) # shows you the top 5 rowa
+print(df.tail()) # bottom 5 rows
+print(df.tail(2)) # start from the bottom, but show me the last 2
+```
+---
+
+
+
 
 
 
