@@ -13,7 +13,7 @@ You can import from one format and export easily to another. Regardless of which
 Let's get to it.
 
 note:These instructions where written using python 3.
-reference and credit: Thanks to [Sentdex](https://www.dataquest.io/blog/web-scraping-tutorial-python/) for the examples
+reference and credit: Thanks to [Sentdex](https://pythonprogramming.net/data-analysis-python-pandas-tutorial-introduction/) for the examples
 
 Ready? To get started install Pandas
 
