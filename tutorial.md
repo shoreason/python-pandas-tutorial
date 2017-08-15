@@ -54,7 +54,7 @@ print(df)
 That command prints out the dataset, but can be too much to see at once (especially with a lot of data). To preview the dataset you can just type any of the below
 
 ```python
-print(df.head()) # shows you the top 5 rowa
+print(df.head()) # shows you the top 5 rows
 print(df.tail()) # bottom 5 rows
 print(df.tail(2)) # start from the bottom, but show me the last 2
 ```
