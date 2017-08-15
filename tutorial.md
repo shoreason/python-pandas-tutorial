@@ -23,6 +23,7 @@ Ready? To get started install Pandas
 $ pip install pandas
 ```
 ---
+
 # Getting Started
 The standard way to import pandas is like below. Almost everyone assigns it a 'pd' alias once imported
 
@@ -33,6 +34,7 @@ imports pandas as pd
 DataFrames are at the core of pandas. You can reference elemts in a dataframe like you would a python dictionary.
 
 --
+
 For instance.
 
 ```python
@@ -41,6 +43,7 @@ data = {'temperature':[75, 73, 80, 64, 32, 65, 77], 'energy_reading':[11, 3, 14,
 df = pd.DataFrame(data) # creating a dataframe from the data
 ```
 --
+
 Now we can preview the data by simply typing
 
 ```python
