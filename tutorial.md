@@ -46,6 +46,8 @@ Now we can preview the data by simply typing
 ```python
 print(df)
 ```
+---
+
 That command prints out the dataset, but can be too much to see at once (especially with a lot of data). To preview the dataset you can just type any of the below
 
 ```python
@@ -78,7 +80,10 @@ data_new = {'temperature':['75', '73', '80', '64', np.nan, '65', '77'],
 
 df_new = pd.DataFrame(data_new)
 print(df_new.head())
+```
+---
 
+```python
 #just replace the value those values with what you want
 df_new = df_new.convert_objects(convert_numeric=True)
 df_new.fillna(0, inplace=True)
