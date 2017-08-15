@@ -68,14 +68,19 @@ print(df[['day', 'energy_reading']])
 ```
 --
 
-Sometimes the data we work with it is not scrubbed and could have 'NaN' which stands for 'Not a Number'. You easily replace such data using dataframes
+Sometimes the data we work with it is not scrubbed and could have missing value as 'NaN' which stands for 'Not a Number'. You easily replace such data using dataframes
 
 ```python
-data_new = {'temperature':[75, 73, 80, 64, NaN, 65, 77], 'energy_reading':[NaN, 3, 14, NaN, 24, 13, 6], 'day': [1, 2, 3, 4, 5, 6, 7]}
+import numpy as np # to simulate a missing value
+
+data_new = {'temperature':['75', '73', '80', '64', np.nan, '65', '77'],
+'energy_reading':[np.nan, '3', '14', np.nan, '24', '13', '6'], 'day': [1, 2, 3, 4, 5, 6, 7]}
 
 df_new = pd.DataFrame(data_new)
+print(df_new.head())
 
 #just replace the value those values with what you want
+df_new.convert_objects(convert_numeric=True)
 df_new.fillna(0, inplace=True)
 
 print(df_new.head())
