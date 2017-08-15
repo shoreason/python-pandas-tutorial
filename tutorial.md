@@ -86,6 +86,7 @@ df_new.fillna(0, inplace=True)
 print(df_new.head())
 ```
 --
+
 I can also choose to drop a column if I think it is no useful. Note: if you experimenting in your code you can try to retain the original dataframe and create a new one to drop columns off.
 
 ```python
@@ -96,15 +97,56 @@ print(df_new.head())
 print(original_df.head())
 ```
 --
+
 Lastly, let's try to filter a field based on a condition
 
-```
+```python
 print(df_new[df_new.temperature > 70])
 ```
 
+---
+# Basic Math and stats
 
+You can learn a lot from your data by simply using 'describe'
 
+```python
+print(df_new.describe())
+```
+You can get this data granually by doing
 
+```python
+df_new['temperature'].mean()
+```
+---
+
+# Importing data 
+
+This is a little straight forward
+
+```python
+df = pd.read_csv('your.csv') # to import csv
+df = pd.read_json('your.json') # to import json
+```
+
+---
+
+# Exercise
+
+Now we can play with a lot more data. Import pandas_datareader module and use the code below to play with the dataset 
+
+```python
+import pandas as pd
+import datetime
+import pandas_datareader.data as web
+import pandas_datareader as pdr
+
+start = datetime.datetime(2010, 1, 1)
+end = datetime.datetime(2015, 1, 1)
+
+df = web.DataReader("XOM", "yahoo", start, end)
+
+print(df.head())
+```
 
 
 
