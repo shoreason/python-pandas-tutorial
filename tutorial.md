@@ -1,6 +1,6 @@
 # Sho's 20-min Python Pandas Tutorial
 
-It is not uncommon to see a lot of people using Excel for data analysis. Excel is great, with a lot of in-built math and stas functions. Where is starts to fall apart is when you have a huge dataset (millions of record).
+It is not uncommon to see a lot of people using Excel for data analysis. Excel is great, with a lot of in-built math and stats functions. Where is starts to fall apart is when you have a huge dataset (millions of record).
 
 --
 
@@ -23,3 +23,24 @@ Ready? To get started install Pandas
 $ pip install pandas
 ```
 ---
+# The basics
+The standard way to import pandas is like below. Almost everyone assigns it a 'pd' alias once imported
+
+```python
+imports pandas as pd
+```
+
+DataFrames are at the core of pandas. You can reference elemts in a dataframe like you would a python dictionary.
+
+--
+For instance.
+
+```python
+data = {'temperature':[75, 73, 80, 64, 32], 'energy_reading':[11, 3, 14, 18, 24]}
+
+df = pd.DataFrame(data) # creating a dataframe from the data
+```
+--
+
+
+
