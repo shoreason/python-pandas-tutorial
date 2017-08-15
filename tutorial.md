@@ -36,7 +36,7 @@ DataFrames are at the core of pandas. You can reference elemts in a dataframe li
 For instance.
 
 ```python
-data = {'temperature':[75, 73, 80, 64, 32, 65, 77], 'energy_reading':[11, 3, 14, 18, 24, 13, 6], 'Day': [1, 2, 3, 4, 5, 6, 7]}
+data = {'temperature':[75, 73, 80, 64, 32, 65, 77], 'energy_reading':[11, 3, 14, 18, 24, 13, 6], 'day': [1, 2, 3, 4, 5, 6, 7]}
 
 df = pd.DataFrame(data) # creating a dataframe from the data
 ```
@@ -54,6 +54,32 @@ print(df.tail()) # bottom 5 rows
 print(df.tail(2)) # start from the bottom, but show me the last 2
 ```
 ---
+
+# Filtering columns 
+
+You can also just filter out rows you are interested in. If I wanted to print just the energy readings I could do this
+
+```python
+print(df.energy_reading) 
+# or
+print(df['energy_reading'])
+# more than one column
+print(df[['day', 'energy_reading']])
+```
+--
+
+Sometimes the data we work with it is not scrubbed and could have 'NaN' which stands for 'Not a Number'. You easily replace such data using dataframes
+
+```python
+data_new = {'temperature':[75, 73, 80, 64, NaN, 65, 77], 'energy_reading':[NaN, 3, 14, NaN, 24, 13, 6], 'day': [1, 2, 3, 4, 5, 6, 7]}
+
+df_new = pd.DataFrame(data_new)
+
+#just replace the value those values with what you want
+df_new.fillna(0, inplace=True)
+
+print(df_new.head())
+```
 
 
 
