@@ -80,11 +80,30 @@ df_new = pd.DataFrame(data_new)
 print(df_new.head())
 
 #just replace the value those values with what you want
-df_new.convert_objects(convert_numeric=True)
+df_new = df_new.convert_objects(convert_numeric=True)
 df_new.fillna(0, inplace=True)
 
 print(df_new.head())
 ```
+--
+I can also choose to drop a column if I think it is no useful. Note: if you experimenting in your code you can try to retain the original dataframe and create a new one to drop columns off.
+
+```python
+original_df = pd.DataFrame.copy(df_new) # make copy of dataframe
+df_new.drop(['energy_reading'], 1, inplace = True) # drop a energy reading
+
+print(df_new.head())
+print(original_df.head())
+```
+--
+Lastly, let's try to filter a field based on a condition
+
+```
+print(df_new[df_new.temperature > 70])
+```
+
+
+
 
 
 
