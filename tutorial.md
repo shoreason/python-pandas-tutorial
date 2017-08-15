@@ -1,6 +1,6 @@
 # Sho's 20-min Python Pandas Tutorial
 
-It is not uncommon to see a lot of people using Excel for data analysis. Excel is great, with a lot of in-built math and stats functions. Where is starts to fall apart is when you have a huge dataset (millions of record).
+It is not uncommon to see a lot of people using Excel for data analysis. Excel is great, with a lot of in-built math and stats functions. Where it starts to fall apart is when you have a huge dataset (millions of record).
 
 --
 
